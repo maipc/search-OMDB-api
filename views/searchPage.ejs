@@ -5,14 +5,14 @@
     <button type="submit"><i class="fas fa-search"></i></button>
 </form>
 <div class="movieList">
-    <% for(var i=0; i<data.Search.length; i++) { %>
+    <% data.Search.forEach(function(item) { %>
         <ul>
-            <li class="title"><i class="fas fa-video"></i><%= data.Search[i].Title %></li>
-            <li>Year: <%= data.Search[i].Year %></li>
-            <li>ID: <%= data.Search[i].imdbID %></li>
-            <img src="<%= data.Search[i].Poster %>" alt="">
+            <li class="title"><i class="fas fa-video"></i><%= item.Title %></li>
+            <li>Year: <%= item.Year %></li>
+            <li>ID: <%= item.imdbID %></li>
+            <img src="<%= item.Poster %>" alt="">
         </ul>
-    <% } %>
+    <% }); %>
 </div>
 
 <%- include ('partials/footer.ejs'); %>
