@@ -1,0 +1,56 @@
+body {
+    font-family: 'Noto Sans', sans-serif;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+form {
+    position: relative;
+    display: inline-block;
+    border: 2px solid lightgray;
+    padding-left: 15px;
+    padding-right: 7px;
+    border-radius: 30px;
+}
+
+input {
+    margin: 0;
+    line-height: 2.5em;
+    padding-right: 5rem;
+    border: 0;
+    background: transparent;
+}
+
+input:focus {
+    outline: 0;
+}
+
+button {
+    background: transparent;
+    border: 0;
+    color: #434343;
+    position: absolute;
+    right: 10px;
+    height: 100%;
+}
+
+ul {
+    list-style-type: none;
+    text-align: start;
+}
+
+.title {
+    font-weight: bold;
+}
+
+.title i {
+    margin-right: 15px;
+}
+
+.movieList {
+    margin-top: 20px;
+    margin-left: 25px;
+    margin-right: 25px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}

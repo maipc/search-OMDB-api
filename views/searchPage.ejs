@@ -1,0 +1,19 @@
+<%- include ('partials/header.ejs'); %>
+
+<form action="/searchMovie" method="POST">
+    <input type="text" name="movie">
+    <button type="submit"><i class="fas fa-search"></i></button>
+</form>
+<div class="movieList">
+    <% for(var i=0; i<data.Search.length; i++) { %>
+        <ul>
+            <li class="title"><i class="fas fa-video"></i><%= data.Search[i].Title %></li>
+            <li>Year: <%= data.Search[i].Year %></li>
+            <li>ID: <%= data.Search[i].imdbID %></li>
+            <img src="<%= data.Search[i].Poster %>" alt="">
+        </ul>
+    <% } %>
+</div>
+
+<%- include ('partials/footer.ejs'); %>
+
